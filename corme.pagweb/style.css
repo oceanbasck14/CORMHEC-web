@@ -1,0 +1,602 @@
+/* Paleta de Colores Corporativos Mineros */
+:root {
+    --color-bg-dark: #1E2D24; /* Fondo Oscuro (Verde Musgo Profundo) */
+    --color-primary-accent: #DAA520; /* Oro/Dorado (Mineral de Acento) */
+    --color-secondary-accent: #8B4513; /* Marrón Tierra/Óxido */
+    --color-text-light: #E0EBE4; /* Blanco Suave/Crudo */
+    --color-accent-box: #2E3D34; /* Fondo de cajas secundario (Verde/Gris) */
+    --color-link-hover: #D2B48C; /* Marrón Arena/Claro para hover */
+    --font-corporate: 'Montserrat', sans-serif;
+}
+
+/* Base Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-corporate);
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    line-height: 1.6;
+    overflow-y: hidden;
+}
+
+/* Efecto de Full-Page Scroll (Scroll-Snapping) */
+.scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.full-screen-section {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 10vw;
+    position: relative;
+    
+    /* Efecto de textura sutil de la imagen (Verde oscuro y Marrón) */
+    background: 
+        linear-gradient(rgba(30, 45, 36, 0.9), rgba(30, 45, 36, 0.9)), 
+        repeating-linear-gradient(-45deg, var(--color-bg-dark), var(--color-bg-dark) 5px, rgba(139, 69, 19, 0.1) 5px, rgba(139,69,19,0.1)10px);
+    background-color: var(--color-bg-dark);
+}
+
+/* ----------------------------------- */
+/* ESTILOS DE SECCIÓN 1: CABECERA */
+/* ----------------------------------- */
+.header-content {
+    text-align: center;
+    padding-bottom: 5vh;
+}
+
+.logo-placeholder {
+    margin-bottom: 20px;
+}
+
+.logo-img {
+    width: 250px;
+    height: 250px;
+    background: rgba(218, 165, 32, 0.1); /* Fondo Dorado sutil */
+    border: 3px solid var(--color-primary-accent);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    /* Sombra de pulso dorada */
+    box-shadow: 0 0 20px rgba(218, 165, 32, 0.5); 
+}
+
+h1 {
+    font-size: 4rem; /* Un poco más sobrio que el futurista */
+    color: var(--color-primary-accent);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    letter-spacing: 5px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    color: var(--color-text-light);
+    font-weight: 400;
+}
+
+/* 2. Cuadro de Contacto Flotante (Derecha) */
+.contact-box {
+    position: absolute;
+    top: 50%;
+    right: 5vw;
+    transform: translateY(-50%);
+    width: 350px;
+    background: var(--color-secondary-accent); /* Fondo Marrón Tierra */
+    border: 1px solid var(--color-primary-accent);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.contact-box h3 {
+    color: var(--color-text-light);
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--color-primary-accent);
+    padding-bottom: 10px;
+}
+
+.contact-box ul {
+    list-style: none;
+}
+
+.contact-box li {
+    margin-bottom: 10px;
+    color: white; 
+    display: flex;
+    align-items: flex-start;
+    font-weight: 300;
+}
+
+.contact-box .icon {
+    color: var(--color-primary-accent);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Botón de Scroll-Down */
+.scroll-down-btn {
+    position: absolute;
+    bottom: 5vh;
+    color: var(--color-primary-accent);
+    text-decoration: none;
+    font-size: 1.2rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.arrow {
+    display: block;
+    font-size: 2rem;
+    line-height: 0.5;
+}
+
+/* ----------------------------------- */
+/* ESTILOS DE SECCIONES GENERALES */
+/* ----------------------------------- */
+.section-title {
+    font-size: 3rem;
+    color: var(--color-primary-accent);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 5vh;
+    border-bottom: 3px solid var(--color-secondary-accent);
+    padding-bottom: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.section-title-small {
+    font-size: 2rem;
+    color: var(--color-link-hover);
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+    font-weight: 500;
+}
+
+/* ----------------------------------- */
+/* ESTILOS DE SECCIÓN 2: INTRODUCCIÓN */
+/* ----------------------------------- */
+.intro-container {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* 4. Cuadro de Introducción Interactivo */
+.interactive-textbox {
+    min-height: 150px;
+    background: var(--color-accent-box);
+    border: 1px solid var(--color-primary-accent);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+/* Animación para el texto que aparece */
+.animated-text {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.animated-text.show {
+    opacity: 1;
+}
+
+/* 10. Botón de Staff Profesional (Estilo Corporativo) */
+.staff-button-container {
+    margin-top: 20px;
+    text-align: right;
+    width: 100%;
+}
+
+.corporate-btn {
+    background: var(--color-primary-accent);
+    color: var(--color-bg-dark);
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-family: var(--font-corporate);
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.corporate-btn:hover {
+    background: var(--color-link-hover);
+    color: black;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.staff-info-modal {
+    background: var(--color-accent-box);
+    border: 2px solid var(--color-secondary-accent);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    right: 5vw;
+    transform: translateY(-50%);
+    width: 400px;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease-in-out, visibility 1.5s; /* 1.5s de transición */
+}
+
+.staff-info-modal.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.staff-info-modal h3 {
+    color: var(--color-primary-accent);
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--color-secondary-accent);
+    padding-bottom: 10px;
+}
+
+.staff-info-modal ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.staff-info-modal li {
+    margin-bottom: 8px;
+    font-weight: 300;
+}
+
+/* ----------------------------------- */
+/* ESTILOS DE SECCIÓN 3: SOBRE LA EMPRESA */
+/* ----------------------------------- */
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px;
+    text-align: justify; /* Alineación del texto a la izquierda, justificado para orden */
+    align-items: center;
+}
+
+.text-block {
+    text-align: justify;
+}
+
+.large-text {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 500;
+}
+
+.lema {
+    margin-top: 30px;
+    color: var(--color-primary-accent);
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-top: 2px solid var(--color-secondary-accent);
+    padding-top: 15px;
+    text-align: center;
+}
+
+.image-placeholder {
+    background: var(--color-secondary-accent); /* Fondo Marrón para la imagen */
+    border: 3px solid var(--color-primary-accent);
+    border-radius: 8px;
+    width: 690px;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+/* ----------------------------------- */
+/* ESTILOS DE SECCIÓN 4: OBJETIVOS Y UNIDADES */
+/* ----------------------------------- */
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+}
+
+/* 6. Tarjetas de Objetivos Interactivas (Hover Accordion) */
+.objective-card {
+    background: var(--color-accent-box);
+    border: 1px solid var(--color-secondary-accent);
+    border-radius: 5px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    position: relative;
+    max-height: 80px;
+}
+
+.objective-card h3 {
+    color: var(--color-primary-accent);
+    margin: 0;
+    font-size: 1.1rem;
+    transition: color 0.4s;
+    font-weight: 600;
+}
+
+.objective-card .detail-text {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s;
+    padding-top: 10px;
+    border-top: 1px solid transparent;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.objective-card:hover {
+    max-height: 300px; /* Abre la tarjeta */
+    border-color: var(--color-primary-accent);
+    box-shadow: 0 0 10px rgba(218, 165, 32, 0.5);
+}
+
+.objective-card:hover h3 {
+    color: var(--color-link-hover);
+}
+
+.objective-card:hover .detail-text {
+    max-height: 200px;
+    opacity: 1;
+    border-top-color: var(--color-link-hover);
+}
+
+.large-card {
+    grid-column: span 3;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+/* 11. Unidades de Negocio */
+.units-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.unit-box {
+    background: var(--color-secondary-accent); /* Fondo Marrón */
+    border: 1px solid var(--color-link-hover);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.unit-box h4 {
+    color: var(--color-text-light);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+/* ----------------------------------- */
+/* ESTILOS DE SECCIÓN 5: SECTOR Y CONTRATOS */
+/* ----------------------------------- */
+.sector-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    width: 100%;
+    max-width: 1100px;
+    margin-bottom: 5vh;
+}
+
+/* 12. Cuadros Interactivos (Escala y Sombra) */
+.sector-card {
+    background: var(--color-accent-box);
+    border: 1px solid var(--color-primary-accent);
+    border-radius: 3px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sector-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(218, 165, 32, 0.7);
+}
+
+.sector-card h4 {
+    color: var(--color-primary-accent);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--color-secondary-accent);
+    padding-bottom: 5px;
+}
+
+.sector-card ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.sector-card li {
+    margin-bottom: 5px;
+}
+
+/* 9. Lista de Contratos */
+.contracts-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 30px;
+}
+
+.project-item {
+    background: rgba(139, 69, 19, 0.1);
+    border: 1px solid var(--color-secondary-accent);
+    color: var(--color-link-hover);
+    padding: 8px;
+    border-radius: 3px;
+    font-size: 0.67rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* ----------------------------------- */
+/* ESTILOS DE SECCIÓN 6: MAQUINARIA */
+/* ----------------------------------- */
+.machinery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 30px;
+}
+
+.machine-item {
+    background: var(--color-accent-box);
+    border: 1px solid var(--color-link-hover);
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: background 0.3s, border-color 0.3s;
+    text-align: center;
+}
+
+.machine-item:hover {
+    background: rgba(218, 165, 32, 0.1);
+    border-color: var(--color-primary-accent);
+}
+
+/* ----------------------------------- */
+/* ESTILOS DE SECCIÓN 7: PIE DE PÁGINA (MVP) */
+/* ----------------------------------- */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.mvp-box {
+    background: var(--color-accent-box);
+    border: 1px solid var(--color-primary-accent);
+    padding: 20px;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.mvp-box h3 {
+    color: var(--color-primary-accent);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--color-secondary-accent);
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+
+.policy-box {
+    grid-column: span 2;
+    border-color: var(--color-secondary-accent);
+}
+
+.policy-box h3 {
+    color: var(--color-secondary-accent);
+    border-bottom: 1px solid var(--color-primary-accent);
+}
+
+.social-box {
+    grid-column: span 2;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.final-phrase {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: var(--color-link-hover);
+    font-weight: 500;
+}
+
+.social-links a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: 1px solid var(--color-primary-accent);
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+    background: var(--color-primary-accent);
+    color: var(--color-bg-dark);
+}
+
+/* ----------------------------------- */
+/* ESTILOS DE SECCIÓN 8: IMAGEN FINAL */
+/* ----------------------------------- */
+.section-8 {
+    background-color: var(--color-bg-dark);
+    background-image: none;
+}
+
+.large-image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: var(--color-secondary-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--color-text-light);
+    border: 5px solid var(--color-primary-accent);
+    border-radius: 10px;
+}
