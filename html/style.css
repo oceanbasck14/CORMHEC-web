@@ -45,7 +45,7 @@ body {
     /* Efecto de textura sutil de la imagen (Verde oscuro y Marrón) */
     background: 
         linear-gradient(rgba(30, 45, 36, 0.9), rgba(30, 45, 36, 0.9)), 
-        repeating-linear-gradient(-45deg, var(--color-bg-dark), var(--color-bg-dark) 5px, rgba(139, 69, 19, 0.1) 5px, rgba(139,69,19,0.1)10px);
+        repeating-linear-gradient(-45deg, var(--color-bg-dark), var(--color-bg-dark) 5px, rgba(139, 69, 19, 0.1) 5px, rgba(139, 69, 19, 0.1) 10px);
     background-color: var(--color-bg-dark);
 }
 

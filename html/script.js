@@ -3,7 +3,8 @@ const introTexts = [
     "La consolidación de nuestra empresa en el mercado se basa en el desarrollo de capacidades alcanzadas por nuestro staff de profesionales.",
     "Nos orientamos a una minimización de pérdidas tanto dentro como fuera de nuestras operaciones.",
     "Prestamos nuestros servicios en el marco de una excelencia en calidad y en el desarrollo de economías de escala.",
-    "Promovemos el empleo de la tecnología más avanzada en nuestro campo, y buscamos permanentemente elevar nuestros estándares a través de la investigación y actualización constantes."];
+    "Promovemos el empleo de la tecnología más avanzada en nuestro campo, y buscamos permanentemente elevar nuestros estándares a través de la investigación y actualización constantes."
+];
 
 let currentTextIndex = 0;
 const introParagraph = document.getElementById('intro-paragraph');
@@ -68,7 +69,13 @@ function setupStaffModal() {
         }
     });
 }
-
+/**
+ * Función de inicialización
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    animateIntro();
+    setupStaffModal();
+});
 /**
  * Función de inicialización
  */
